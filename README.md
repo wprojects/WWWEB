@@ -142,10 +142,39 @@ ____
 
 
 ____
+## Database
+
+![database icon](https://cdn.glitch.com/162b879e-fd42-40d9-8519-671d783b8c70%2Fdb_icon.png?v=1575816313975)[Database API](./docs/DATABASE-API.md)
+
+
+____
+## IoT
+
+![iot icon](https://cdn.glitch.com/162b879e-fd42-40d9-8519-671d783b8c70%2Fiot.png?v=1575817305056)[IoT API](./docs/IOT-API.md)
+
+
+____
+## Roadmap
+
+🛣️[Road to v1.0.0](./docs/ROADMAP.md)
+
+
+____
+## License
+
+![MIT License logo](https://cdn.glitch.com/162b879e-fd42-40d9-8519-671d783b8c70%2F64px-License_icon-mit.png?v=1575813934631)[Copyright (c) 2019 Eric Eisaman](LICENSE.md)
+
+____
 
 ## Issues
 
 🍎 Please post any issues to <a href="https://github.com/EricEisaman/cs1/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc" noopener noreferer>GitHub</a>.
+
+____
+
+## Credits
+
+🙏 Big thanks to [all the fine people](./docs/CREDITS.md) who contributed to the underlying technologies!
 
     
     

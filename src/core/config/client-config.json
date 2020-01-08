@@ -1,6 +1,6 @@
 {
-  "gameName": "Clean Start",
-  "welcomeMsg": "This world can be anything you dream it to be. ...  a carnival ... a haunted house .... a city ... anything ... it is all up to you.  You have the power to create.   May inspiration dwell in you forever.",
+  "gameName": "CS1 Community Park",
+  "welcomeMsg": "Welcome to CS1 Community Park . . . . . . Please join us at 9pm for some tasty roasted ... marshmallow smores.",
   "playerLeftMsg": "... has packed up and headed for home.",
   "theme": {
     "fontFamily": "Arial",
@@ -10,7 +10,7 @@
     "formButtonColor": "#A82F1E",
     "overlayColor": "rgba(0,0,0, 0.9)",
     "fontSize": 2,
-    "logo": "https://cdn.glitch.com/376a6bb1-e9b2-4998-af7a-cc4ea70344b8%2FCS1_Clean_logo_64.png?v=1575125604200"
+    "logo": "https://cdn.glitch.com/a66c3f5c-9aba-45c0-952e-ccc59d8b0df3%2FCS1_logo_64.png?v=1564891473540"
   },
   "avatar": {
     "models": [
@@ -81,7 +81,7 @@
     }
   },
   "bgm": {
-    "songs": [],
+    "songs": [247087410],
     "volume": 0.2,
     "playAll": true,
     "initialDelay": 5000
