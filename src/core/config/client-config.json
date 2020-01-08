@@ -1,7 +1,7 @@
 {
-  "gameName": "CS1 Community Park",
-  "welcomeMsg": "Welcome to CS1 Community Park . . . . . . Please join us at 9pm for some tasty roasted ... marshmallow smores.",
-  "playerLeftMsg": "... has packed up and headed for home.",
+  "gameName": "Clean Start",
+  "welcomeMsg": "",
+  "playerLeftMsg": "",
   "theme": {
     "fontFamily": "Arial",
     "titleFontColor": "#C4A43C",
@@ -10,7 +10,7 @@
     "formButtonColor": "#A82F1E",
     "overlayColor": "rgba(0,0,0, 0.9)",
     "fontSize": 2,
-    "logo": "https://cdn.glitch.com/a66c3f5c-9aba-45c0-952e-ccc59d8b0df3%2FCS1_logo_64.png?v=1564891473540"
+    "logo": "https://cdn.glitch.com/376a6bb1-e9b2-4998-af7a-cc4ea70344b8%2FCS1_Clean_logo_64.png?v=1575125604200"
   },
   "avatar": {
     "models": [
@@ -68,20 +68,20 @@
   },
   "sounds": {
     "playerJoined": {
-      "url": "https://cdn.glitch.com/c6f972e4-0e71-47c3-85c6-30f0ce9dcba1%2Fthunder.mp3?v=1562601088647"
+      "url": ""
     },
     "playerLeft": {
-      "url": "https://cdn.glitch.com/c6f972e4-0e71-47c3-85c6-30f0ce9dcba1%2Fthunder.mp3?v=1562601088647"
+      "url": ""
     },
     "jump":{
-      "url":"https://cdn.glitch.com/83b7f985-f6ce-40dd-ac98-772aff98ebbf%2Fwoosh.mp3?v=1559499927954"
+      "url":""
     },
     "land":{
-      "url":"https://cdn.glitch.com/826d99b1-f98c-4ee8-bbe5-abdd27784a77%2Fland.mp3?v=1575809351148"
+      "url":""
     }
   },
   "bgm": {
-    "songs": [247087410],
+    "songs": [],
     "volume": 0.2,
     "playAll": true,
     "initialDelay": 5000

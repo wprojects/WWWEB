@@ -20,4 +20,4 @@ const addon = {
   }
   
 }
-module.exports = addon; 
+module.exports = addon;

@@ -103,6 +103,37 @@ AFRAME.registerSystem('vrui', {
               })
             }
           });   
+      
+                lh.el.addEventListener('menudown',e=>{
+            CS1.stats.container.object3D.rotation.y = CS1.cam.object3D.rotation.y;
+            let v = CS1.stats.container.getAttribute('visible');
+            CS1.stats.container.setAttribute('visible',!v);
+            if(v){
+              document.querySelectorAll('.dark').forEach(e=>{
+               e.classList.remove('screen')
+              })
+            }else{
+              document.querySelectorAll('.dark').forEach(e=>{
+               e.classList.add('screen')
+              })
+            }
+          });
+      
+          rh.el.addEventListener('menudown',e=>{
+            CS1.stats.container.object3D.rotation.y = CS1.cam.object3D.rotation.y;
+            let v = CS1.stats.container.getAttribute('visible');
+            CS1.stats.container.setAttribute('visible',!v); 
+            if(v){
+              document.querySelectorAll('.dark').forEach(e=>{
+               e.classList.remove('screen')
+              })
+            }else{
+              document.querySelectorAll('.dark').forEach(e=>{
+               e.classList.add('screen')
+              })
+            }
+          });  
+      
     } else if(CS1.device=="Standard") {
       
       document.addEventListener('keypress',e=>{

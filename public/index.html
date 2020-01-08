@@ -29,13 +29,13 @@
     <meta name="HandheldFriendly" content="true" />
     <link rel="stylesheet" type="text/css" href="bundle.css" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="canonical" href="https://cs1.glitch.me/" />
+    <link rel="canonical" href="https://clean-start.glitch.me/" />
     <link
       rel="shortcut icon"
       href="https://cdn.glitch.com/a66c3f5c-9aba-45c0-952e-ccc59d8b0df3%2FCS1_logo_64.png?v=1564891473540"
     />
-    
-<!--<script src="brython.js"></script>-->    
+
+    <!--<script src="brython.js"></script>-->
     <script src="aframe-v0.9.2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/EricEisaman/aframe-keyboard/dist/aframe-keyboard.min.js"></script>
     <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.js"></script>
@@ -44,6 +44,8 @@
 
     <!-- aframe-jukebox includes the htmlembed component used in vrui in the main bundle -->
     <script src="aframe-jukebox.min.js"></script>
+
+    <script src="rtc-conf.js"></script>
 
     <script src="bundle.js"></script>
 
@@ -68,7 +70,7 @@
     </div>
 
     <div id="scene-container" style="position:relative; display:none">
-      <a-scene environment="preset: starry; ground: none;" game>
+      <a-scene environment="preset: default; ground: flat;" game>
         <a-assets>
           <img
             id="grass"
@@ -83,23 +85,11 @@
         </a-assets>
 
         <!-- You can use a ground plane, the environment ground, or add ground to your scene model. -->
-        <a-plane
-          id="ground"
-          material="src:#grass; repeat: 700 700; 
-               transparent: true; shader: flat"
-          height="500"
-          width="500"
-          position="0 0.1 0"
-          rotation="-90 0 0"
-        ></a-plane>
+        <!--       <a-plane id="ground" material="src:#grass; repeat: 700 700; 
+               transparent: true; shader: flat" height="500" width="500" 
+               position="0 0.1 0" rotation="-90 0 0"></a-plane> -->
 
         <!-- Scene Model-->
-        <a-entity
-          id="scene-model"
-          position="0 0.1 0"
-          shadow="receive: true"
-          gltf-model="url(https://cdn.glitch.com/376724db-dc5f-44ca-af35-36d00838079c%2Fnature_scene.glb?v=1562355917189)"
-        ></a-entity>
 
         <!-- Nav Mesh -->
         <!--       <a-entity id="navmesh"
@@ -112,34 +102,89 @@
           grabbable
           log="max:10;channel:grab"
           geometry="primitive: plane"
-          position="-9.25 2 -11.2"
-          rotation="0 90 0"
+          position="0 2 -6"
+          rotation="0 0 0"
           scale="2 2 2"
-          material="color: #153D0F; side:double"
-          text="color: #CEA579"
+          material="color: #890b0b; side:double"
+          text="color: #fff"
         >
         </a-entity>
 
-        <a-entity
-          gltf-model="https://cdn.glitch.com/8294eaa5-5d27-4cd6-9c0c-ce42d3cabdfc%2Fpotion.glb?v=1566412875364"
-          position="12 0 -13"
-          grabbable
-          id="potion"
-        ></a-entity>
+        <!-- TEMPLATE FOR ADDING YOUR 3D MODELS  -->
+        <a-gltf-model
+          scale="5 5 5"
+          position="0 -1.970 -195"
+          src="https://cdn.glitch.com/d4e948a1-30be-48f1-9fa6-b31246b9754b%2FWCITY%20Finale3.glb?v=1578521044828"
+        >
+        </a-gltf-model>
 
         <a-player></a-player>
-
         <a-jukebox
-          position="0 2.2 -8"
+          position="0 3 -9.3"
           scale="2 2 2"
           scaletext="1.3"
-          logo="https://cdn.glitch.com/a66c3f5c-9aba-45c0-952e-ccc59d8b0df3%2FCS1_logo_512.png?v=1564891633017"
+          logo="https://cdn.glitch.com/d4e948a1-30be-48f1-9fa6-b31246b9754b%2FW_Icon.jpg?v=1578476387376"
           border="blue"
           current="maroon"
           highlight="maroon"
-          src="539018871 , 471053673 , 207323417 , 587979555 , 289829014 , 154728402 , 267080399 , 467164248 , 119221738 , 509421603"
-          names="Old Town Road , Boo'd Up Reggae Remix , See You Again , Sucker Remix , Rockabye , My Cherie Amour Remix , Holy , Take Me Home Country Roads , Camisado , Calma"
-          cs1-jukebox
+          src="https://ipfs.io/ipfs/QmRaYWxJ9NChirhkGyJKh8JQiUWxwR93vFPJRGXMqvEzVP , 
+               https://ipfs.io/ipfs/Qmcg226r2zQFHSrnTggjCYbbFZQy7rsB5nHCoXsvoXfZHv , 
+               https://ipfs.io/ipfs/QmNznsjQ9o3ZHNgS4XN5RSGsjnYGiCSwGyq4s6uCKXc7Df , 
+               https://ipfs.io/ipfs/QmSFeuxHV3Cx2JWBL5uKFMtY1vYUDE8jCJ8XEpsqgJsRyG ,
+               https://ipfs.io/ipfs/QmQS9HLH3dgJfxoYpuQpQimJz8rGd3MZSe3rtj8GANdGZr , 
+               https://ipfs.io/ipfs/QmV9RxWEbiFEraFzJELUAwivGJy7RBjx7ePjmisiAYvt8r , 
+               https://ipfs.io/ipfs/QmQkXevcbAd1mLAaorqLzzgM5Q88HdXwsqzY2rvmBLpdDL , 
+               https://ipfs.io/ipfs/QmYs9e74iEDfyPAb3mhhNaysXBFFSyrN1PrJ3mnPsAHgWC , 
+               https://ipfs.io/ipfs/QmUmxGkwYGVLtbP799aQeHnnY4n2t8XDcMn7pgtLZAiCtp , 
+               https://ipfs.io/ipfs/QmZuRAbmkgybJHHmExVf3rRVv2nMcKsWHNFjbc1qcnWhpn , 
+               https://ipfs.io/ipfs/Qma9kuJQyQ6uL9NXzJng1s2LPfFmjY974rba5s3CfACJB1?filename=Fall(ing).wav ,
+               https://ipfs.io/ipfs/QmecPoX8mSaTWsYd7ea1bTE1VbCgWs4W9KWxiu6H5EDtK3 ,
+               https://ipfs.io/ipfs/QmZz9exZsxX32nMn65tEYtPiYbkxrGMwugW4wXrAS85Rgx ,
+               https://ipfs.io/ipfs/QmVBWLYNXMHviEM3REScuvW2iA4C6m1yUutLkvcAniCPhH ,
+               https://ipfs.io/ipfs/QmQmuTKjDBtk8iCsoAxX62vJBxiDRK6xRyY7Cr3cDfCfHF ,
+               https://ipfs.io/ipfs/QmSX41WAdSgvsDZx2SoKHLE5gau1aEFufJeHTYbuz5X8Ps ,
+               https://ipfs.io/ipfs/QmaukCAkrUEpZFtbkgYykXN4WPZ3VanWyG7nS1o9hCrLt1 ,
+               https://ipfs.io/ipfs/QmWu9WnEqqsKz7LLy2pdRQsPc8z5zLwHdQPAXe3nBnswou ,
+               https://ipfs.io/ipfs/QmUiB64UUc5X9XSfxtKPTLF62P7BUMkPdDqzW6LWPPi4kM ,
+               https://ipfs.io/ipfs/QmXoGpEJ7utZyAKMu1rvVmd4D7Va2LDzH3ijsB1dgadbcH ,
+               https://ipfs.io/ipfs/QmZeVu27v9EZKrqxMMn9mgw32WBmcR3TmrG92L7xwhFigw ,
+               https://ipfs.io/ipfs/QmdnzvphvP5K3XJm623Lytayo7JkSkkkJhsYeEMdyszxJZ ,
+               https://ipfs.io/ipfs/QmW5pboLq2sAgWdXxEBF2dwPoVomHLj2fyL52PcYyoRvik ,
+               https://ipfs.io/ipfs/QmV6HG9hMseR6AyZkqzUBJ9vCt6nKjE6TgFAks3Dsu4i8s ,
+               https://ipfs.io/ipfs/QmW2i2k4z8fB7ha4xQLpDcgdbeCMD8NPMa2MAUvYco4YKa ,
+               https://ipfs.io/ipfs/Qmb8w9KrtpD6TDDN82mju6GWHwmber3XcQQvKihgaZ1ZsY ,
+               https://ipfs.io/ipfs/QmQoma1Z7JxhVX9SSwZgX15P3QHtsFbqBQRKTqpxTFbVZn ,
+               https://ipfs.io/ipfs/QmfQCmApfuUcbpur2mQKkN9tZV57oJpL8atQDdHwGVxdYp ,
+               https://ipfs.io/ipfs/QmaNphwgJFAQKzVBRxqdiNeHaTyXCChDgTyFCbgHEEybUe"
+          names="Inspire , 
+                 King of R & B Vibes , 
+                 Models Only , 
+                 Lit ,
+                 Rockstar R & B , 
+                 Afternoon Jams , 
+                 Good Vibes , 
+                 69 , 
+                 Bangers , 
+                 Camisado , 
+                 Fall(ing), 
+                 Chillout ,
+                 Accidental Masterpieces ,
+                 Curtain Call, 
+                 Beauty,
+                 Space Cowboy, 
+                 Mystery Man,
+                 Cinco De Mayo, 
+                 One Time For The One Time ,
+                 Gan$ta ,
+                 Block Party ,
+                 MENJ ,
+                 Rainy Days ,
+                 $ticking 2 The $cript ,
+                 Bout My Ladies ,
+                 Ride The Wave ,
+                 0 to 1 ,
+                 Electronica ,
+                 THE GOAT"
         ></a-jukebox>
 
         <a-entity light="type: ambient; color: #BBB; intensity: 0.4"></a-entity>
